@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TodotestPage } from '../todotest/todotest';
 
 /**
- * Generated class for the LoginPage page.
+ * Generated class for the TodotestPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +10,16 @@ import { TodotestPage } from '../todotest/todotest';
 
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-todotest',
+  templateUrl: 'todotest.html',
 })
-export class LoginPage {
+export class TodotestPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  goToList() {
-    this.navCtrl.push(TodotestPage)
-  }
-
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    console.log('ionViewDidLoad TodotestPage');
   }
 
 }
