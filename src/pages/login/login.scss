@@ -1,3 +1,21 @@
 page-login {
 
 }
+
+.button-md {
+    margin: 2.5rem;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+.item-input .label {
+    color: black;
+}
+
+.label-md[stacked] {
+    font-size: 1.5rem;
+    font-style: italic;
+}
