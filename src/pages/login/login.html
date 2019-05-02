@@ -23,7 +23,7 @@
         <ion-label stacked>Password</ion-label>
         <ion-input type='password' [(ngModel)]='user.password' name ='password' required></ion-input>
       </ion-item>
-      <button ion-button (click)='goToList()'>Submit</button>
+      <button ion-button (click)='goToList()' [disabled] = "user.username && user.password ? false : true">Submit</button>
     </ion-list>
   </form>
 </ion-content>
