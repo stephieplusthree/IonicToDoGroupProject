@@ -1,12 +1,12 @@
 page-login {
-
+    
 }
 
 .button-md {
     margin: 2.5rem;
 }
 
-.submit {
+.center {
     display: flex;
     justify-content: center;
 }
@@ -18,4 +18,19 @@ page-login {
 .label-md[stacked] {
     font-size: 1.5rem;
     font-style: italic;
+}
+
+.form-container {
+    border: 3px red;
+    border-radius: 5%;
+    background-color: white;
+    padding: 2rem;
+
+}
+
+.background {
+    background-image:url("../assets/imgs/postit.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
