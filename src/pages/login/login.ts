@@ -9,11 +9,17 @@ import { TodotestPage } from '../todotest/todotest';
 })
 export class LoginPage {
 
+  user: any = {
+    username: '',
+    password: ''
+  }
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   goToList() {
     this.navCtrl.push(TodotestPage)
+    console.log(this.user)
   }
 
   ionViewDidLoad() {
