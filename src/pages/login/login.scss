@@ -9,6 +9,7 @@ page-login {
 .center {
     display: flex;
     justify-content: center;
+    margin: 1.5rem;
 }
 
 .item-input .label {
@@ -21,7 +22,7 @@ page-login {
 }
 
 .form-container {
-    border: 3px red;
+    border: solid 2px black;
     border-radius: 5%;
     background-color: white;
     padding: 2rem;
@@ -33,4 +34,8 @@ page-login {
     background-size: cover;
     background-repeat: no-repeat;
 
+}
+
+h1 {
+    font-size: 2rem;
 }
