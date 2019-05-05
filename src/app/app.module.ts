@@ -9,13 +9,16 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from  '../pages/login/login'
 import { TodotestPage } from '../pages/todotest/todotest'
+import { RegisterPage } from '../pages/register/register';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LoginPage,
-    TodotestPage
+    TodotestPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -27,12 +30,13 @@ import { TodotestPage } from '../pages/todotest/todotest'
     MyApp,
     HomePage,
     LoginPage, 
-    TodotestPage
+    TodotestPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}
