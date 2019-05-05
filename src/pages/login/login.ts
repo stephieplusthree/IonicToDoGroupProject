@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { TodotestPage } from '../todotest/todotest';
 
 @IonicPage()
 @Component({
@@ -15,7 +9,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
+  user: any = {
+    username: '',
+    password: ''
+  }
+
+  isLoggedIn: boolean = false;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  goToList() {
+    this.navCtrl.push(TodotestPage)
+    this.isLoggedIn = true;
+    console.log(this.user)
   }
 
   ionViewDidLoad() {

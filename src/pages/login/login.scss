@@ -1,3 +1,42 @@
 page-login {
+    
+}
 
+.button-md {
+    margin: 2.5rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem;
+}
+
+.item-input .label {
+    color: black;
+    font-style: italic;
+}
+
+.label-md[stacked] .label-ios[stacked] {
+    font-size: 1.5rem;
+    // font-style: italic;
+}
+
+.form-container {
+    border: solid 2px black;
+    border-radius: 5%;
+    background-color: white;
+    padding: 2rem;
+
+}
+
+.background {
+    background-image:url("../assets/imgs/postit.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+h1 {
+    font-size: 1.75rem;
 }

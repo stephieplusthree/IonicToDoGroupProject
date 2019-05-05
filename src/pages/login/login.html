@@ -1,11 +1,30 @@
-<!--
-  Generated template for the LoginPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <navbar></navbar>
 
-<ion-content padding>
-
+<ion-content padding class='background'>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col col-md-5> 
+        <div  class='form-container'>
+          <h1 class='center'><u>Welcome to the Todo List</u></h1>
+          <form action='' method='POST' autocomplete='off'>
+            <ion-list>
+              <ion-item>
+                <ion-label stacked>Username</ion-label>
+                <ion-input type='text' [(ngModel)]='user.username' name='username' required></ion-input>
+              </ion-item>
+              <br>
+              <ion-item>
+                <ion-label stacked>Password</ion-label>
+                <ion-input type='password' [(ngModel)]='user.password' name ='password' required></ion-input>
+              </ion-item>
+              <div class='center'>
+                <button ion-button (click)='goToList()' [disabled] = "user.username && user.password ? false : true">Log In</button>
+              </div>
+            </ion-list>
+          </form>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
