@@ -14,11 +14,14 @@ export class LoginPage {
     password: ''
   }
 
+  isLoggedIn: boolean = false;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   goToList() {
     this.navCtrl.push(TodotestPage)
+    this.isLoggedIn = true;
     console.log(this.user)
   }
 
