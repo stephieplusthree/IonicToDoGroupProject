@@ -2,28 +2,30 @@
 <ion-content padding class='background'>
   <ion-grid>
     <ion-row justify-content-center>
-      <ion-col col-md-5>
+      <ion-col col-md-4>
         <div class='form-container'>
           <h1 class='center'><u>Register Here!</u></h1>
-          <ion-list>
+          <form>
+            <ion-list>
 
-            <ion-item>
-              <ion-label fixed>Email</ion-label>
-              <ion-input type="text" name='username' [(ngModel)]='userServ.user.username'></ion-input>
-            </ion-item>
+              <ion-item>
+                <ion-label stacked>Email</ion-label>
+                <ion-input type="text" name='email' [(ngModel)]='userServ.user.username'></ion-input>
+              </ion-item>
 
-            <ion-item>
-              <ion-label fixed>Password</ion-label>
-              <ion-input type="password" name='password' [(ngModel)]='userServ.user.password'></ion-input>
-            </ion-item>
+              <ion-item>
+                <ion-label stacked>Password</ion-label>
+                <ion-input type="password" name='password' [(ngModel)]='userServ.user.password'></ion-input>
+              </ion-item>
 
-            <div class='center'>
-              <button ion-button (click)=navToHomePage()>
-                Create Account
-              </button>
-            </div>
+              <div class='center'>
+                <button ion-button [disabled] = "userServ.user.username && userServ.user.password ? false : true" (click)=navToHomePage()>
+                  Create Account
+                </button>
+              </div>
 
-          </ion-list>
+            </ion-list>
+          </form>
         </div>
       </ion-col>
     </ion-row>
