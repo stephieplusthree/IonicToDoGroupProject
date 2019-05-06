@@ -11,9 +11,7 @@ import { UserProvider } from '../../providers/user/user';
 })
 export class NavbarComponent {
 
-  constructor(public navCtrl: NavController, public userServ: UserProvider) { 
-    console.log('User: ' + this.userServ.user.username + ', ' + this.userServ.user.password)
-  }
+  constructor(public navCtrl: NavController, public userServ: UserProvider) { }
 
   toLogin() {
     this.navCtrl.push(LoginPage)
