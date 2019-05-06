@@ -32,4 +32,9 @@ export class NavbarComponent {
     this.navCtrl.push(TodotestPage)
   }
 
+  logout() {
+    this.userServ.isLoggedIn = false;
+    this.navCtrl.push(LoginPage)
+  }
+
 }

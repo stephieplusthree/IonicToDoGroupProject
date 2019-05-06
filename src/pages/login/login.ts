@@ -19,7 +19,9 @@ export class LoginPage {
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               public userServ: UserProvider
-              ) { }
+              ) { 
+                console.log('Logged In?: ' + this.userServ.isLoggedIn)
+              }
 
   goToList() {
     this.navCtrl.push(HomePage)
