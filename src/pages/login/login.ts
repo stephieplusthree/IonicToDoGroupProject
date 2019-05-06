@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-// MAY BE ABLE TO DELETE THIS IF ROUTING TO HOME PAGE WORKS
-import { TodotestPage } from '../todotest/todotest';
 import { HomePage } from '../home/home';
+import { UserProvider } from '../../providers/user/user';
+
 
 @IonicPage()
 @Component({
@@ -10,21 +10,20 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-
+  
   user: any = {
     username: '',
     password: ''
   }
 
-  isLoggedIn: boolean = false;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public userServ: UserProvider
+              ) { }
 
   goToList() {
     this.navCtrl.push(HomePage)
-    this.isLoggedIn = true;
-    console.log(this.user)
+    this.userServ.isLoggedIn = true;
   }
 
   ionViewDidLoad() {

@@ -11,6 +11,7 @@ import { LoginPage } from  '../pages/login/login';
 import { TodotestPage } from '../pages/todotest/todotest';
 import { RegisterPage } from '../pages/register/register';
 import { ComponentsModule} from '../components/components.module'
+import { UserProvider } from '../providers/user/user';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { ComponentsModule} from '../components/components.module'
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UserProvider,
   ]
 })
 export class AppModule {}

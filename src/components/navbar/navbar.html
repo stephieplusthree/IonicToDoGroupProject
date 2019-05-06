@@ -1,10 +1,10 @@
 
 <ion-header>
     <ion-navbar>
-        <div *ngIf='isLoggedIn'>            
+        <div *ngIf='userServ.isLoggedIn'>            
             <a (click)=toHome()>Home</a>
         </div>
-        <div *ngIf='!isLoggedIn'>
+        <div *ngIf='!userServ.isLoggedIn'>
             <a (click)=toLogin()>Login</a>
             <a (click)=toRegister()>Register</a>
         </div>

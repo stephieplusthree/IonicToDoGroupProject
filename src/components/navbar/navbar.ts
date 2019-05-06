@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
 import { RegisterPage } from '../../pages/register/register';
 import { TodotestPage } from '../../pages/todotest/todotest';
+import { UserProvider } from '../../providers/user/user';
 
 @Component({
   selector: 'navbar',
@@ -11,9 +12,7 @@ import { TodotestPage } from '../../pages/todotest/todotest';
 })
 export class NavbarComponent {
 
-  @Input() isLoggedIn: boolean;
-
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public userServ: UserProvider) {
  
   }
 
