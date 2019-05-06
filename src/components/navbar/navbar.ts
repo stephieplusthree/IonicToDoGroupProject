@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-
+import { LoginPage } from '/Users/adit/Desktop/Shit/TodoProject/IonicToDoGroupProject/src/pages/login/login'
+import { NavController } from 'ionic-angular';
+import { HomePage } from '../../pages/home/home';
+import { RegisterPage } from '../../pages/register/register';
 
 
 /**
@@ -15,12 +18,23 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  toLogin() {
+    this.navCtrl.push(LoginPage)
+  }
+  toHome() {
+    this.navCtrl.push(HomePage)
+    console.log('toHome')
+  }
+  toRegister() {
+    this.navCtrl.push(RegisterPage)
+  }
   text: string;
 
-  
-  constructor() {
+  constructor(public navCtrl: NavController) {
     console.log('Hello NavbarComponent Component');
     this.text = 'Hello World';
+
+  
   }
 
 }
