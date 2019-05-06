@@ -9,14 +9,14 @@
 
             <ion-item>
               <ion-label fixed>Email</ion-label>
-              <ion-input type="text" value=""></ion-input>
+              <ion-input type="text" name='username' [(ngModel)]='userServ.user.username'></ion-input>
             </ion-item>
 
             <ion-item>
               <ion-label fixed>Password</ion-label>
-              <ion-input type="password"></ion-input>
+              <ion-input type="password" name='password' [(ngModel)]='userServ.user.password'></ion-input>
             </ion-item>
-            
+
             <div class='center'>
               <button ion-button (click)=navToHomePage()>
                 Create Account
