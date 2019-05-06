@@ -3,6 +3,7 @@ import { LoginPage } from '../../pages/login/login'
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
 import { RegisterPage } from '../../pages/register/register';
+import { TodotestPage } from '../../pages/todotest/todotest';
 
 @Component({
   selector: 'navbar',
@@ -10,23 +11,24 @@ import { RegisterPage } from '../../pages/register/register';
 })
 export class NavbarComponent {
 
+  constructor(public navCtrl: NavController) {
+ 
+  }
+
   toLogin() {
     this.navCtrl.push(LoginPage)
   }
+
   toHome() {
     this.navCtrl.push(HomePage)
-    console.log('toHome')
   }
+  
   toRegister() {
     this.navCtrl.push(RegisterPage)
   }
-  text: string;
 
-  constructor(public navCtrl: NavController) {
-    console.log('Hello NavbarComponent Component');
-    this.text = 'Hello World';
-
-  
+  toTodo() {
+    this.navCtrl.push(TodotestPage)
   }
 
 }

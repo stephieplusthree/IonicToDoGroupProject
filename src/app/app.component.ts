@@ -3,7 +3,7 @@ import { Platform } from 'ionic-angular';
 
 
 //PAGE(S)
-import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
 
 @Component({
   templateUrl: 'app.html'
@@ -11,7 +11,7 @@ import { HomePage } from '../pages/home/home';
 export class MyApp {
 
   //Set up your ROOT Page!
-  rootPage:any = HomePage;
+  rootPage:any = LoginPage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
