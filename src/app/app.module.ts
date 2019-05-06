@@ -19,15 +19,12 @@ import { ComponentsModule} from '../components/components.module'
     HomePage,
     LoginPage,
     RegisterPage,
-    TodotestPage
-    
-   
+    TodotestPage  
   ],
   imports: [
     BrowserModule,
     ComponentsModule,
-    IonicModule.forRoot(MyApp),
-   
+    IonicModule.forRoot(MyApp),   
     FormsModule
   ],
 

@@ -1,16 +1,8 @@
 import { Component } from '@angular/core';
-import { LoginPage } from '/Users/adit/Desktop/Shit/TodoProject/IonicToDoGroupProject/src/pages/login/login'
+import { LoginPage } from '../../pages/login/login'
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
 import { RegisterPage } from '../../pages/register/register';
-
-
-/**
- * Generated class for the NavbarComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
 
 @Component({
   selector: 'navbar',
