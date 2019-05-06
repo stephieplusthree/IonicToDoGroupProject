@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 
 
-
 /**
  * Generated class for the NavbarComponent component.
  *
@@ -18,6 +17,7 @@ export class NavbarComponent {
 
   text: string;
 
+  
   constructor() {
     console.log('Hello NavbarComponent Component');
     this.text = 'Hello World';

@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { RegisterPage } from '../register/register';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -20,5 +21,4 @@ export class HomePage {
   goToRegister() {
     this.navCtrl.push(RegisterPage)  
   }
-
 }

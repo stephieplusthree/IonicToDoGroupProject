@@ -7,8 +7,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { LoginPage } from  '../pages/login/login'
-import { TodotestPage } from '../pages/todotest/todotest'
+import { LoginPage } from  '../pages/login/login';
+import { TodotestPage } from '../pages/todotest/todotest';
 import { RegisterPage } from '../pages/register/register';
 import { ComponentsModule} from '../components/components.module'
 
@@ -19,15 +19,15 @@ import { ComponentsModule} from '../components/components.module'
     HomePage,
     LoginPage,
     RegisterPage,
+    TodotestPage
     
    
   ],
   imports: [
     BrowserModule,
     ComponentsModule,
-    IonicModule.forRoot(MyApp)
-    TodotestPage,
-    RegisterPage,
+    IonicModule.forRoot(MyApp),
+   
     FormsModule
   ],
 
