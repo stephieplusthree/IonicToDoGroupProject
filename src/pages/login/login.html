@@ -11,15 +11,15 @@
             <ion-list>
               <ion-item>
                 <ion-label stacked>Username</ion-label>
-                <ion-input type='text' [(ngModel)]='user.username' name='username' required></ion-input>
+                <ion-input type='text' [(ngModel)]='userServ.user.username' name='username' required></ion-input>
               </ion-item>
               <br>
               <ion-item>
                 <ion-label stacked>Password</ion-label>
-                <ion-input type='password' [(ngModel)]='user.password' name ='password' required></ion-input>
+                <ion-input type='password' [(ngModel)]='userServ.user.password' name ='password' required></ion-input>
               </ion-item>
               <div class='center'>
-                <button ion-button (click)='goToList()' [disabled] = "user.username && user.password ? false : true">Log In</button>
+                <button ion-button (click)='goToList()' [disabled] = "userServ.user.username && userServ.user.password ? false : true">Log In</button>
               </div>
             </ion-list>
           </form>

@@ -11,8 +11,9 @@ import { UserProvider } from '../../providers/user/user';
 })
 export class NavbarComponent {
 
-  constructor(public navCtrl: NavController, public userServ: UserProvider) { }
-
+  constructor(public navCtrl: NavController, public userServ: UserProvider) { 
+    console.log('User: ' + this.userServ.user.username + ', ' + this.userServ.user.password)
+  }
 
   toLogin() {
     this.navCtrl.push(LoginPage)
@@ -27,7 +28,7 @@ export class NavbarComponent {
   }
 
   logout() {
-    this.userServ.isLoggedIn = false;
+    this.userServ.emptyLogin()
     this.navCtrl.push(LoginPage)
   }
 

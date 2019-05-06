@@ -9,4 +9,19 @@ export class UserProvider {
 
   isLoggedIn: boolean = false;
 
+  user: any = {
+    username: '',
+    password: ''
+  }
+
+  emptyLogin() {
+    this.isLoggedIn = false
+    this.user = {
+      username: '',
+      password: ''
+    }
+
+  
+  }
+
 }

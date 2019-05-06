@@ -11,11 +11,6 @@ import { UserProvider } from '../../providers/user/user';
 })
 export class LoginPage {
   
-  user: any = {
-    username: '',
-    password: ''
-  }
-
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               public userServ: UserProvider
@@ -29,10 +24,7 @@ export class LoginPage {
   }
 
   ionViewDidEnter() {
-    this.user = {
-      username: '',
-      password: ''
-    }
+    this.userServ.emptyLogin()
   }
 
   ionViewDidLoad() {
