@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LoginPage } from '../../pages/login/login'
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
@@ -10,6 +10,8 @@ import { TodotestPage } from '../../pages/todotest/todotest';
   templateUrl: 'navbar.html'
 })
 export class NavbarComponent {
+
+  @Input() isLoggedIn: boolean;
 
   constructor(public navCtrl: NavController) {
  
