@@ -8,7 +8,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from  '../pages/login/login';
-import { TodotestPage } from '../pages/todotest/todotest';
 import { RegisterPage } from '../pages/register/register';
 import { ComponentsModule} from '../components/components.module'
 import { UserProvider } from '../providers/user/user';
@@ -19,8 +18,7 @@ import { UserProvider } from '../providers/user/user';
     MyApp,
     HomePage,
     LoginPage,
-    RegisterPage,
-    TodotestPage  
+    RegisterPage  
   ],
   imports: [
     BrowserModule,
@@ -34,7 +32,6 @@ import { UserProvider } from '../providers/user/user';
     MyApp,
     HomePage,
     LoginPage, 
-    TodotestPage,
     RegisterPage
   ],
   providers: [

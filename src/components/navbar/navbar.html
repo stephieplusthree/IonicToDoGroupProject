@@ -2,7 +2,6 @@
 <ion-header>
     <ion-toolbar>
         <div *ngIf='userServ.isLoggedIn'>            
-            <!-- <a (click)=toHome()>Home</a> -->
             <a (click)=logout()>Log Out</a>
         </div>
         <div *ngIf='!userServ.isLoggedIn'>

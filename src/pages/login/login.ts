@@ -29,7 +29,6 @@ export class LoginPage {
   }
 
   ionViewDidEnter() {
-    console.log('ion view did enter')
     this.user = {
       username: '',
       password: ''
@@ -37,7 +36,7 @@ export class LoginPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+
   }
 
 }

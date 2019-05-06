@@ -3,7 +3,6 @@ import { LoginPage } from '../../pages/login/login'
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
 import { RegisterPage } from '../../pages/register/register';
-import { TodotestPage } from '../../pages/todotest/todotest';
 import { UserProvider } from '../../providers/user/user';
 
 @Component({
@@ -12,9 +11,8 @@ import { UserProvider } from '../../providers/user/user';
 })
 export class NavbarComponent {
 
-  constructor(public navCtrl: NavController, public userServ: UserProvider) {
-    console.log(this.userServ.isLoggedIn)
-  }
+  constructor(public navCtrl: NavController, public userServ: UserProvider) { }
+
 
   toLogin() {
     this.navCtrl.push(LoginPage)
@@ -26,10 +24,6 @@ export class NavbarComponent {
   
   toRegister() {
     this.navCtrl.push(RegisterPage)
-  }
-
-  toTodo() {
-    this.navCtrl.push(TodotestPage)
   }
 
   logout() {
