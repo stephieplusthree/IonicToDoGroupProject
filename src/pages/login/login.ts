@@ -26,6 +26,14 @@ export class LoginPage {
     this.userServ.isLoggedIn = true;
   }
 
+  ionViewDidEnter() {
+    console.log('ion view did enter')
+    this.user = {
+      username: '',
+      password: ''
+    }
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
