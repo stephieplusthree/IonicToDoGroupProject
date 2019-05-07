@@ -1,11 +1,6 @@
-<ion-header>
 
-  <ion-navbar>
-    <ion-title>Add Task</ion-title>
-  </ion-navbar>
 
-</ion-header>
-
+<navbar></navbar>
 
 <ion-content padding>
   <form [formGroup]="formGroup" (ngSubmit)="saveTask(formGroup.value)">
@@ -25,8 +20,9 @@
       <div class="alert" *ngIf="!formGroup.controls['content'].valid 
       && formGroup.controls['content'].touched">{{ contentAlert }}</div>
     </ion-item>
-    <button ion-button type="submit" [disabled]="!formGroup.valid">Save Task</button>
+    <button ion-button type="submit" [disabled]="!formGroup.valid">Save Task</button>    
   </form>
+  <button ion-button (click)=toHome()>Cancel</button>
 </ion-content>
 
 

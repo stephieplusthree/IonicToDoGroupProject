@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TaskService } from '../../providers/task-service/task-service';
 import { Task } from '../../models/task.model';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -20,5 +21,9 @@ export class ViewTaskPage {
   deleteTask(createDate: number) {
     this.taskService.deleteTask(createDate);
     this.navCtrl.pop();
+  }
+
+  toHome() {
+    this.navCtrl.push(HomePage)
   }
 }

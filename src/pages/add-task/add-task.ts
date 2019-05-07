@@ -3,6 +3,7 @@ import { IonicPage, NavController,NavParams } from 'ionic-angular';
 import { TaskService } from '../../providers/task-service/task-service';
 import { Task } from '../../models/task.model';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -27,5 +28,9 @@ export class AddTaskPage {
   saveTask(task: Task) {
     this.taskService.saveTask(task);
     this.navCtrl.pop();
+  }
+
+  toHome() {
+    this.navCtrl.push(HomePage)
   }
 }
