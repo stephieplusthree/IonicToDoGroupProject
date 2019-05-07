@@ -1,8 +1,14 @@
-<navbar></navbar>
+<ion-header>
+  <ion-navbar>
+    <ion-title>My Tasks</ion-title>
+  </ion-navbar>
+</ion-header>
 
-<ion-content padding-top>
-  <p>
-    TO-DO LIST GOES HERE
-  </p>
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let task of tasks | async" (click)="getTask(task.createDate)">
+      {{ task.title }}
+    </button>
+  </ion-list>
+  <button ion-button (click)="addTask()">Add Task</button>
 </ion-content>
-

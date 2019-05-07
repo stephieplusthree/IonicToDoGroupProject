@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -11,6 +11,11 @@ import { LoginPage } from  '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { ComponentsModule} from '../components/components.module'
 import { UserProvider } from '../providers/user/user';
+import { AddTaskPage } from '../pages/add-task/add-task';
+import { ViewTaskPage } from '../pages/view-task/view-task';
+
+import { TaskService } from '../providers/task-service/task-service';
+import { IonicStorageModule } from '@ionic/storage';
 
 
 @NgModule({
@@ -18,13 +23,17 @@ import { UserProvider } from '../providers/user/user';
     MyApp,
     HomePage,
     LoginPage,
-    RegisterPage  
+    RegisterPage,
+    AddTaskPage,
+    ViewTaskPage  
   ],
   imports: [
     BrowserModule,
     ComponentsModule,
     IonicModule.forRoot(MyApp),   
-    FormsModule
+    IonicStorageModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
 
   bootstrap: [IonicApp],
@@ -32,13 +41,16 @@ import { UserProvider } from '../providers/user/user';
     MyApp,
     HomePage,
     LoginPage, 
-    RegisterPage
+    RegisterPage,
+    AddTaskPage,
+    ViewTaskPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UserProvider,
+    TaskService
   ]
 })
 export class AppModule {}
